@@ -3,7 +3,7 @@ class Cargo(Ship):
     def __init__(self, cargo, quality, draft, crew):
         self.cargo = cargo
         self.quality = quality
-        super().__init__(draft, crew)
+        Ship.__init__(draft, crew)
 
     def pesototal(self):
         acum = self.crew*1.5
