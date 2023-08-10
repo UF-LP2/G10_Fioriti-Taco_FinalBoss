@@ -1,4 +1,3 @@
-from src import cCruise
 from src.cCruise import Cruise
 from src.Cargo import Cargo
 
