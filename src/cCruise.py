@@ -1,4 +1,5 @@
-import Ship
+from src.Ship import Ship
+
 
 class Cruise(Ship):
     def __init__(self, passengers, draft, crew):
@@ -12,4 +13,4 @@ class Cruise(Ship):
         if self.draft - self.pesototal() <= 20:
             return True
         else:
-            return False
+            raise not_worth("No vale la pena robar")

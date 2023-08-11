@@ -9,9 +9,10 @@ class Ship:
         else:
             return False
 
+
+
     def pesototal(self):
         return self.crew*1.5
 
     def __del__(self):
         print("barco robado")
-
