@@ -11,7 +11,6 @@ class Cruise(Ship):
 
     def is_worth_it(self):
         if self.draft - self.pesototal() <= 20:
-            return True
-        else:
-            #raise not_worth("No vale la pena robar")
             raise ValueError
+        print("Barco robado")
+        return
