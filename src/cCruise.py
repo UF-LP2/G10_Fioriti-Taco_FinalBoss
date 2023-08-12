@@ -3,8 +3,8 @@ from src.Ship import Ship
 
 class Cruise(Ship):
     def __init__(self, passengers, draft, crew):
-         self.passengers = passengers
-         Ship.__init__(draft, crew)
+        self.passengers = passengers
+        super().__init__(draft, crew)
 
     def pesototal(self):
         return (self.passengers*2.25) + (self.crew*1.5)
@@ -13,4 +13,5 @@ class Cruise(Ship):
         if self.draft - self.pesototal() <= 20:
             return True
         else:
-            raise not_worth("No vale la pena robar")
+            #raise not_worth("No vale la pena robar")
+            raise ValueError

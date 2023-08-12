@@ -1,13 +1,16 @@
 class Ship:
+    numbarco=0
     def __init__(self, draft, crew):
+        Ship.numbarco += 1
+        self.numbarco = Ship.numbarco
         self.draft = draft
         self.crew = crew
 
     def is_worth_it(self):
-        if self.draft - self.pesototal() <= 20:
+        if self.draft - self.pesototal() >= 20:
             return True
         else:
-            return False
+            raise ValueError
 
 
 

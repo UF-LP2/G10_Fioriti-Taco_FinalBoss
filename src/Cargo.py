@@ -3,7 +3,7 @@ class Cargo(Ship):
     def __init__(self, cargo, quality, draft, crew):
         self.cargo = cargo
         self.quality = quality
-        Ship.__init__(draft, crew)
+        super().__init__(draft, crew)
 
     def pesototal(self):
         acum = self.crew*1.5
@@ -17,9 +17,9 @@ class Cargo(Ship):
         return acum
 
     def is_worth_it(self):
-        if self.draft - self.pesototal() <= 20:
+        if self.draft - self.pesototal() >= 20:
             return True
         else:
-            return False
+            raise ValueError
 
 
