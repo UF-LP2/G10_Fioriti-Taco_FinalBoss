@@ -20,7 +20,6 @@ class Cargo(Ship):
 
         if self.draft - self.pesototal() < 20:
             raise ValueError
-        print("Barco Robado")
-        return
+        return "Barco robado"
 
 

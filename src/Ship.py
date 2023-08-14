@@ -9,8 +9,7 @@ class Ship:
     def is_worth_it(self):
         if self.draft - self.pesototal() < 20:
             raise ValueError
-        print("Barco robado")
-        return
+        return "Barco robado"
 
 
 
