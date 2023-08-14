@@ -3,11 +3,11 @@ class Ship:
     def __init__(self, draft, crew):
         Ship.numbarco += 1
         self.numbarco = Ship.numbarco
-        self.draft = draft
-        self.crew = crew
+        self.draft = float(draft)
+        self.crew = float(crew)
 
     def is_worth_it(self):
-        if float(self.draft) - self.pesototal() <= 20:
+        if self.draft - self.pesototal() < 20:
             raise ValueError
         print("Barco robado")
         return
@@ -15,7 +15,7 @@ class Ship:
 
 
     def pesototal(self):
-        return float(self.crew)*1.5
+        return self.crew*1.5
 
     def __del__(self):
         print("barco robado")
