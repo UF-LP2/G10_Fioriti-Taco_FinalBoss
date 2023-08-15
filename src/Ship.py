@@ -31,7 +31,7 @@ class Cruise(Ship):
 class Cargo(Ship):
     def __init__(self, cargo, quality, draft, crew):
         self.cargo = float(cargo)
-        self.quality = float(quality)
+        self.quality = quality
         super().__init__(draft, crew)
 
     def pesototal(self):
