@@ -1,5 +1,5 @@
-from src.cCruise import Cruise
-from src.Cargo import Cargo
+from src.Ship import Cruise
+from src.Ship import Cargo
 from src.Ship import Ship
 import csv
 
