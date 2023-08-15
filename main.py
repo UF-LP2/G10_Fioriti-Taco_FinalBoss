@@ -3,6 +3,12 @@ from src.Ship import Cargo
 from src.Ship import Ship
 import csv
 
+def verificar(x):
+    try:
+        float(x)
+        return x
+    except ValueError:
+        return False
 
 def main()->None:
     with open("src/ships.csv") as file:
@@ -11,8 +17,10 @@ def main()->None:
 
         for line in reader:
 
+            if verificar(line[0]) and verificar(line[1]):
+
                 if line[3] == "" and line[2] != "":
-                    crucero = Cruise(line[2], line[0], line[1])
+                    crucero = Cruise(verificar(line[2]), line[0], line[1])
                     try:
                         abordar = crucero.is_worth_it()
                         print(abordar)
@@ -20,7 +28,7 @@ def main()->None:
                         print("No asaltar")
 
                 elif line[3] != "" and line[2] != "":
-                    barco = Cargo(line[2], line[3], line[0], line[1])
+                    barco = Cargo(verificar(line[2]), verificar(line[3]), line[0], line[1])
                     try:
                         abordar = barco.is_worth_it()
                         print(abordar)
