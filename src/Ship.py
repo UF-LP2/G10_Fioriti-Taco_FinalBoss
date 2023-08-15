@@ -11,8 +11,6 @@ class Ship:
             raise ValueError
         return "Barco robado"
 
-
-
     def pesototal(self):
         return self.crew*1.5
 
@@ -51,5 +49,3 @@ class Cargo(Ship):
         if self.draft - self.pesototal() < 20:
             raise ValueError
         return "Barco robado"
-
-
