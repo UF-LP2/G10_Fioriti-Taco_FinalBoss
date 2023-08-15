@@ -17,7 +17,7 @@ def main()->None:
                         abordar = crucero.is_worth_it()
                         print(abordar)
                     except ValueError:
-                        print("Peso menor a 20, no asaltar")
+                        print("No asaltar")
 
                 elif line[3] != "" and line[2] != "":
                     barco = Cargo(line[2], line[3], line[0], line[1])
@@ -25,7 +25,7 @@ def main()->None:
                         abordar = barco.is_worth_it()
                         print(abordar)
                     except ValueError:
-                        print("peso menor a 20, no asaltar")
+                        print("No asaltar")
 
                 else:
                     barquito = Ship(line[0], line[1])
@@ -33,7 +33,7 @@ def main()->None:
                         abordar = barquito.is_worth_it()
                         print(abordar)
                     except ValueError:
-                        print("peso menor a 20, no robar")
+                        print("No asaltar")
 
 
 
